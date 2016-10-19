@@ -67,7 +67,7 @@ class ComputerController extends Controller
         if($computer){
             return response()->json(["Status" => "Ok", "data" => $computer], 200);
         }else{
-            return response()->json(["Status" => "Computer not exists", 500);
+            return response()->json(["Status" => "Computer not exists"], 500);
         }
     }
 
@@ -102,9 +102,9 @@ class ComputerController extends Controller
             $computer->client_id = $request->client_id;
             
             if($computer->save()){
-                return response()->json(["Status" => "Computer updated", 200);
+                return response()->json(["Status" => "Computer updated"], 200);
             }else{
-                return response()->json(["Status" => "Computer not updated", 500);
+                return response()->json(["Status" => "Computer not updated"], 500);
             }
         }
 

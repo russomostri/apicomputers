@@ -100,7 +100,7 @@ class ClientController extends Controller
             }
             
         }else{
-            return response()->json(["Status" => "Client no exists", 204);
+            return response()->json(["Status" => "Client no exists"], 204);
         }
     }
 
@@ -120,7 +120,7 @@ class ClientController extends Controller
             }
         }
         else{
-            return response()->json(["Status" => "Client no exists", 204);
+            return response()->json(["Status" => "Client no exists"], 204);
         }
     }
 
